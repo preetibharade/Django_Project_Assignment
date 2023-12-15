@@ -1,0 +1,12 @@
+<!-- candidate_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Candidates List</h2>
+<ul>
+    {% for candidate in candidates %}
+        <li>{{ candidate.first_name }} {{ candidate.last_name }} - <a href="{% url 'view_candidate' candidate.id %}">View</a> | <a href="{% url 'edit_candidate' candidate.id %}">Edit</a> | <a href="{% url 'delete_candidate' candidate.id %}">Delete</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'create_candidate' %}">Add Candidate</a>
+{% endblock %}

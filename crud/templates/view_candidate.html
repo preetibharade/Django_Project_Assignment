@@ -1,0 +1,135 @@
+<!-- edit_candidate.html -->
+{% extends 'candidate_list.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Details</title>
+
+    <!-- Add your custom styles or link to an external stylesheet here -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        dl {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        dt {
+            font-weight: bold;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .back-link {
+            margin-top: 15px; /* Adjust margin as needed */
+            text-align: right;
+            display: block;
+            color: #004080; /* Dark blue color */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Candidate's Details</h1>
+
+    <dl>
+        <dt>ID:</dt>
+        <dd>{{ candidate.id }}</dd>
+
+        <dt>First Name:</dt>
+        <dd>{{ candidate.first_name }}</dd>
+
+        <dt>Last Name:</dt>
+        <dd>{{ candidate.last_name }}</dd>
+
+        <dt>Email:</dt>
+        <dd>{{ candidate.email }}</dd>
+
+        <dt>Persona:</dt>
+        <dd>{{ candidate.persona }}</dd>
+
+        <dt>Role:</dt>
+        <dd>{{ candidate.role }}</dd>
+
+        <dt>Date of Birth:</dt>
+        <dd>{{ candidate.dob }}</dd>
+
+        <dt>Screenig Mode:</dt>
+        <dd>{{ candidate.screening_mode }}</dd>
+
+        <dt>Gender:</dt>
+        <dd>{{ candidate.gender }}</dd>
+
+        <dt>Contact Number(primary):</dt>
+        <dd>{{ candidate.contact_no_primary }}</dd>
+
+        <dt>Contact Number(alternate):</dt>
+        <dd>{{ candidate.contact_no_alternate }}</dd>
+
+        <dt>Marital Status:</dt>
+        <dd>{{ candidate.marital_status}}</dd>
+
+        <dt>Referred By:</dt>
+        <dd>{{ candidate.referred_by }}</dd>
+
+        <dt>Address:</dt>
+        <dd>{{ candidate.address_line }}</dd>
+
+        <dt>City:</dt>
+        <dd>{{ candidate.city }}</dd>
+
+        <dt>Pincode:</dt>
+        <dd>{{ candidate.pincode }}</dd>
+        
+        <dt>Experience Level:</dt>
+        <dd>{{ candidate.experience_level }}</dd>
+
+        <dt>Educational Level:</dt>
+        <dd>{{ candidate.education_level }}</dd>
+
+        <dt>Pincode:</dt>
+        <dd>{{ candidate.pincode }}</dd>
+
+        <dt>Notice Period:</dt>
+        <dd>{{ candidate.notice_period }}</dd>
+
+        <!-- Add other relevant details -->
+    </dl>
+
+    <p class="back-link">
+        <a href="{% url 'candidate_list' %}">Back to Candidates List</a>
+    </p>
+</div>
+</body>
+
+{% endblock %}
