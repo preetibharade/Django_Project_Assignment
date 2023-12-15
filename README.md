@@ -2,7 +2,7 @@
 
 Instructions to run the project:
 1. Clone this project to your local machine.
-2. Create an virtul environment with a desired name.
+2. Create an virtual environment with a desired name.
 3. Open the visual studio and open the project.
 4. Run these commands before running the server: pip install django-crispy-forms, pip install django-bootstrap4.
 5. Run (py manage.py runserver) command in the terminal to start the server
